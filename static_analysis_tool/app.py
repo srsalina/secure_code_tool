@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from transformers import pipeline
 import subprocess
 import os
+
 
 app = Flask(__name__)
 CORS(app)
@@ -22,7 +24,19 @@ def upload_file():
 def run_bandit(file_path):
     command = f"bandit -r {file_path}"
     result = subprocess.run(command.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    return result.stdout.decode('utf-8')
+    bandit_results = result.stdout.decode('utf-8')
+
+    # Use Hugging Face for Analysis
+    with open(file_path, 'r') as file:
+        code = file.read()
+
+    nlp = pipeline("fill-mask", model="distilbert-base-uncased")
+    suggestions = nlp(f"{code} [MASK]")
+
+    # combine and output results
+    combined_results = bandit_results + "\nAI Suggestions:\n" + str(suggestions)
+    return combined_results
+
 
 if __name__ == "__main__":
     os.makedirs("uploads", exist_ok=True)
