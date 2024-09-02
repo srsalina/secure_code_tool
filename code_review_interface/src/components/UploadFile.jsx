@@ -10,15 +10,19 @@ function UploadFile({onUpload}){
         setFile(e.target.files[0])
     }
 
-    const handleSubmit = e => {
-        e.preventDefault()
-
-        if(file){
-            const formData = new FormData();
-            formData.append('file', file)
-            onUpload(formData)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        if (file) {
+          const formData = new FormData();
+          formData.append('file', file);
+          console.log("Submitting form with file:", file);  // Debugging output
+          onUpload(formData);
+        } else {
+          console.error("No file selected.");  // Error output
         }
-    }
+      };
+    
 
     return (
         <Container>

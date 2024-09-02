@@ -1,0 +1,95 @@
+[
+    {
+        "cve_id": "CVE-2024-20286",
+        "description": "A vulnerability in the Python interpreter of Cisco NX-OS Software could allow an authenticated, low-privileged, local attacker to escape the Python sandbox and gain unauthorized access to the underlying operating system of the device.\r\n\r\nThe vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by manipulating specific functions within the Python interpreter. A successful exploit could allow an attacker to escape the Python sandbox and execute arbitrary commands on the underlying operating system with the privileges of the authenticated user.&nbsp;\r\nNote: An attacker must be authenticated with Python execution privileges to exploit these vulnerabilities. For more information regarding Python execution privileges, see product-specific documentation, such as the  section of the Cisco Nexus 9000 Series NX-OS Programmability Guide.",
+        "references": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-psbe-ce-YvbTn5du",
+            "https://www.cisco.com/c/en/us/td/docs/dcn/nx-os/nexus9000/105x/programmability/cisco-nexus-9000-series-nx-os-programmability-guide-105x/m-n9k-python-api-101x.html?bookSearch=true#concept_A2CFF094ADCB414C983EA06AD8E9A410"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-20285",
+        "description": "A vulnerability in the Python interpreter of Cisco NX-OS Software could allow an authenticated, low-privileged, local attacker to escape the Python sandbox and gain unauthorized access to the underlying operating system of the device.\r\n\r\nThe vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by manipulating specific functions within the Python interpreter. A successful exploit could allow an attacker to escape the Python sandbox and execute arbitrary commands on the underlying operating system with the privileges of the authenticated user.&nbsp;\r\nNote: An attacker must be authenticated with Python execution privileges to exploit these vulnerabilities. For more information regarding Python execution privileges, see product-specific documentation, such as the  section of the Cisco Nexus 9000 Series NX-OS Programmability Guide.",
+        "references": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-psbe-ce-YvbTn5du",
+            "https://www.cisco.com/c/en/us/td/docs/dcn/nx-os/nexus9000/105x/programmability/cisco-nexus-9000-series-nx-os-programmability-guide-105x/m-n9k-python-api-101x.html?bookSearch=true#concept_A2CFF094ADCB414C983EA06AD8E9A410"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-20284",
+        "description": "A vulnerability in the Python interpreter of Cisco NX-OS Software could allow an authenticated, low-privileged, local attacker to escape the Python sandbox and gain unauthorized access to the underlying operating system of the device.\r\n\r\nThe vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by manipulating specific functions within the Python interpreter. A successful exploit could allow an attacker to escape the Python sandbox and execute arbitrary commands on the underlying operating system with the privileges of the authenticated user.&nbsp;\r\nNote: An attacker must be authenticated with Python execution privileges to exploit these vulnerabilities. For more information regarding Python execution privileges, see product-specific documentation, such as the  section of the Cisco Nexus 9000 Series NX-OS Programmability Guide.",
+        "references": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-psbe-ce-YvbTn5du",
+            "https://www.cisco.com/c/en/us/td/docs/dcn/nx-os/nexus9000/105x/programmability/cisco-nexus-9000-series-nx-os-programmability-guide-105x/m-n9k-python-api-101x.html?bookSearch=true#concept_A2CFF094ADCB414C983EA06AD8E9A410"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-8088",
+        "description": "There is a HIGH severity vulnerability affecting the CPython \"zipfile\"\nmodule affecting \"zipfile.Path\". Note that the more common API \"zipfile.ZipFile\" class is unaffected.\n\n\n\n\n\nWhen iterating over names of entries in a zip archive (for example, methods\nof \"zipfile.Path\" like \"namelist()\", \"iterdir()\", etc)\nthe process can be put into an infinite loop with a maliciously crafted\nzip archive. This defect applies when reading only metadata or extracting\nthe contents of the zip archive. Programs that are not handling\nuser-controlled zip archives are not affected.",
+        "references": [
+            "https://mail.python.org/archives/list/security-announce@python.org/thread/GNFCKVI4TCATKQLALJ5SN4L4CSPSMILU/",
+            "https://github.com/python/cpython/pull/122906",
+            "https://github.com/python/cpython/issues/122905",
+            "https://github.com/python/cpython/commit/795f2597a4be988e2bb19b69ff9958e981cb894e",
+            "https://github.com/python/cpython/commit/8c7348939d8a3ecd79d630075f6be1b0c5b41f64",
+            "https://github.com/python/cpython/commit/dcc5182f27c1500006a1ef78e10613bb45788dea",
+            "https://github.com/python/cpython/commit/e0264a61119d551658d9445af38323ba94fc16db",
+            "https://github.com/python/cpython/issues/123270"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-43404",
+        "description": "MEGABOT is a fully customized Discord bot for learning and fun. The `/math` command and functionality of MEGABOT versions < 1.5.0 contains a remote code execution vulnerability due to a Python `eval()`. The vulnerability allows an attacker to inject Python code into the `expression` parameter when using `/math` in any Discord channel. This vulnerability impacts any discord guild utilizing MEGABOT. This vulnerability was fixed in  release version 1.5.0.",
+        "references": [
+            "https://github.com/NicPWNs/MEGABOT/security/advisories/GHSA-vhxp-4hwq-w3p2",
+            "https://github.com/NicPWNs/MEGABOT/issues/137",
+            "https://github.com/NicPWNs/MEGABOT/pull/138",
+            "https://github.com/NicPWNs/MEGABOT/commit/71e79e5581ea36313700385b112d863053fb7ed6",
+            "https://github.com/NicPWNs/MEGABOT/releases/tag/v1.5.0"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-39705",
+        "description": "NLTK through 3.8.1 allows remote code execution if untrusted packages have pickled Python code, and the integrated data package download functionality is used. This affects, for example, averaged_perceptron_tagger and punkt.",
+        "references": [
+            "https://github.com/nltk/nltk/issues/3266",
+            "https://github.com/nltk/nltk/issues/2522",
+            "https://www.vicarius.io/vsociety/posts/rce-in-python-nltk-cve-2024-39705-39706"
+        ]
+    },
+    {
+        "cve_id": "CVE-2024-4032",
+        "description": "The \u201cipaddress\u201d module contained incorrect information about whether certain IPv4 and IPv6 addresses were designated as \u201cglobally reachable\u201d or \u201cprivate\u201d. This affected the is_private and is_global properties of the ipaddress.IPv4Address, ipaddress.IPv4Network, ipaddress.IPv6Address, and ipaddress.IPv6Network classes, where values wouldn\u2019t be returned in accordance with the latest information from the IANA Special-Purpose Address Registries.\n\nCPython 3.12.4 and 3.13.0a6 contain updated information from these registries and thus have the intended behavior.",
+        "references": [
+            "https://github.com/python/cpython/issues/113171",
+            "https://github.com/python/cpython/pull/113179",
+            "https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml",
+            "https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml",
+            "https://mail.python.org/archives/list/security-announce@python.org/thread/NRUHDUS2IV2USIZM2CVMSFL6SCKU3RZA/",
+            "https://github.com/python/cpython/commit/22adf29da8d99933ffed8647d3e0726edd16f7f8",
+            "https://github.com/python/cpython/commit/40d75c2b7f5c67e254d0a025e0f2e2c7ada7f69f",
+            "https://github.com/python/cpython/commit/895f7e2ac23eff4743143beef0f0c5ac71ea27d3",
+            "https://github.com/python/cpython/commit/ba431579efdcbaed7a96f2ac4ea0775879a332fb",
+            "https://github.com/python/cpython/commit/c62c9e518b784fe44432a3f4fc265fb95b651906",
+            "https://github.com/python/cpython/commit/f86b17ac511e68192ba71f27e752321a3252cee3",
+            "http://www.openwall.com/lists/oss-security/2024/06/17/3",
+            "https://security.netapp.com/advisory/ntap-20240726-0004/"
+        ]
+    },
+    {
+        "cve_id": "CVE-2023-29483",
+        "description": "eventlet before 0.35.2, as used in dnspython before 2.6.0, allows remote attackers to interfere with DNS name resolution by quickly sending an invalid packet from the expected IP address and source port, aka a \"TuDoor\" attack. In other words, dnspython does not have the preferred behavior in which the DNS name resolution algorithm would proceed, within the full time window, in order to wait for a valid packet. NOTE: dnspython 2.6.0 is unusable for a different reason that was addressed in 2.6.1.",
+        "references": [
+            "https://www.dnspython.org/",
+            "https://github.com/rthalley/dnspython/releases/tag/v2.6.0",
+            "https://github.com/rthalley/dnspython/issues/1045",
+            "https://security.snyk.io/vuln/SNYK-PYTHON-DNSPYTHON-6241713",
+            "https://github.com/eventlet/eventlet/issues/913",
+            "https://github.com/eventlet/eventlet/releases/tag/v0.35.2",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VOHJOO3OM65UIUUUVDEXMCTXNM6LXZEH/",
+            "https://security.netapp.com/advisory/ntap-20240510-0001/",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NLRKR57IFVKQC2GCXZBFLCLBAWBWL3F6/",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/X3BNSIK5NFYSAP53Y45GOCMOQHHDLGIF/"
+        ]
+    }
+]

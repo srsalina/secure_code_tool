@@ -1,1 +1,6 @@
 venv/
+./uploads/
+static_analysis_tool/uploads
+advisory-database/
+safety-db/
+scripts/
