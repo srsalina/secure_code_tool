@@ -1,11 +1,12 @@
 # Basic libraries
 numpy==1.21.2
 pandas==1.3.3
-scikit-learn==0.24.2
+scikit-learn==1.0.2  # Updated to a newer compatible version
 
 # Hugging Face Transformers and Datasets
 transformers==4.32.0
-datasets==2.15.1
+datasets==2.21.0
+
 
 # PyTorch with GPU support
 torch==2.0.1  # Make sure the correct version is compatible with your CUDA version

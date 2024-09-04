@@ -16,6 +16,8 @@ pip install --upgrade pip
 # Install the required packages
 pip install -r requirements.txt
 
+pip install nltk
+
 # Download additional resources, if needed
 echo "Downloading necessary resources..."
 python3 -m nltk.downloader punkt
