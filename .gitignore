@@ -6,3 +6,24 @@ safety-db/
 scripts/
 nvdcve-1.1-modified.json
 python_parser.py
+# Model files and checkpoints
+data/fine-tuned-bart/
+data/fine-tuned-bart-VII/
+data/results/
+data/results_vii/
+data/results/checkpoint-*/
+
+# Tokenized datasets
+data/tokenized_vulnerabilities_dataset/
+data/tokenized_vulnerabilities_datasetVII/
+
+# PyTorch and training artifacts
+*.bin
+*.safetensors
+*.pt
+*.arrow
+*.json
+
+# Cache and temporary files
+data/*/cache-*
+data/*/*.state.json
